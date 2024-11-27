@@ -44,7 +44,7 @@ function Users() {
     const [data, setdata] = useState([])
 
     const getdata = async () => {
-      const result = await axios.get('http://localhost:3700/admin/getdeatails')
+      const result = await axios.get(`${process.env.REACT_APP_API_URL}/admin/getdeatails`)
       try {
         console.log("data get successfully")
         setdata(result.data)

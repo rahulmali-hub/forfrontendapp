@@ -37,7 +37,7 @@ function Roleassign({userid,data11}) {
       };
   
       try {
-        const res = await axios.post('http://localhost:3700/admin/roleassign', postData);
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/admin/roleassign`, postData);
         console.log("Role assigned successfully:", res.data);
         data11()
         handleClose();
